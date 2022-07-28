@@ -1,6 +1,6 @@
 pipeline {
 	agent { 
-		docker { image 'python:3.10.5-alpine3.16' } 
+		docker { image 'maven:3.8.6-jdk-11-slim' } 
 		}
 	stages {
 		stage('build') {
