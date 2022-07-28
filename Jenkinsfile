@@ -1,13 +1,13 @@
 pipeline {
 	agent { 
-		docker { image 'docker'
+		docker { image 'maven:3.8.6-jdk-11-slim'
 		args '-v /var/run/docker.sock:/var/run/docker.sock' } 
 		}
 	stages {
 		stage('build') {
 			steps{
-        		sh 'docker run hello-world'
-				//'maven:3.8.6-jdk-11-slim'
+        		sh 'docker run maven:3.8.6-jdk-11-slim'
+				
 				echo "this is build"
 				sh "mvn --version"
 			}
