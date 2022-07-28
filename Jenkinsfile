@@ -11,7 +11,7 @@ pipeline{
 				echo "this is test"
 			}
 		}
-	}post{
+	} post{
 		always{
 			echo "always print this"
 		}
